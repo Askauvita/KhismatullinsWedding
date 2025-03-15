@@ -1,26 +1,345 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приглашение на свадьбу</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="invitation">
-        <h1>Дорогие друзья!</h1>
-        <p>Мы рады пригласить вас на нашу свадьбу.</p>
-        <div class="details">
-            <p><strong>Дата:</strong> 15 декабря 2023 года</p>
-            <p><strong>Время:</strong> 15:00</p>
-            <p><strong>Место:</strong> Ресторан "Розовый закат", ул. Цветочная, 45</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Свадебное приглашение</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <!-- Главный экран -->
+      <div class="invate-title">Не ждали? А мы женимся! :)</div>
+      <div class="hero">
+        <div class="container">
+          <div class="photos">
+            <div class="header-photos-left">
+              <img
+                src="images/gazeta2.png"
+                alt="Молодожен 2"
+                class="photo gazeta-left"
+              />
+              <img
+                src="images/dilda.jpg"
+                alt="Молодожен 1"
+                class="photo left"
+              />
+            </div>
+            <div class="heart">
+              <img src="images/heart.png" alt="Сердечко" class="clip" />
+            </div>
+            <div class="header-photos-right">
+              <img
+                src="images/nastya.jpg"
+                alt="Молодожен 2"
+                class="photo right"
+              />
+              <img
+                src="images/gazeta.png"
+                alt="Молодожен 2"
+                class="photo gazeta-right"
+              />
+            </div>
+          </div>
         </div>
-        <div class="note">
-            <p>Будем рады разделить этот важный день с вами!</p>
+      </div>
+
+      <div class="title-names">
+        <div class="formule">Тимур + Настя =</div>
+        <div class="double-hearts-container">
+          <img src="images/double_hearts.png" />
         </div>
-        <footer>
-            <p>Подтверждение присутствия: +7 (999) 123-45-67</p>
-        </footer>
+        <div class="date">24.07.2025</div>
+      </div>
+      <div class="separator" style="height: 30px"></div>
+      <div class="decision">
+        <div class="decision-title">Наша история</div>
+        <div class="decision-description">
+          Мы встретились в июле 2022 года и с тех пор мы всегда вместе. Наши
+          совместные годы полны прекрасных моментов, ошибок и удач, совместных
+          открытий и радостей!
+        </div>
+        <div class="decision-photos-container">
+          <div class="photo-content">
+            <img src="images/decision1.jpg" />
+            <img src="images/decision2.jpg" />
+            <img src="images/decision3.jpg" class="decision3-photo" />
+          </div>
+        </div>
+      </div>
+      <div class="invite-container">
+        <div class="invite-badge">
+          <div class="invite-badge-title">
+            Приглашение
+            <img src="images/star_small.png" class="stars" alt="stars" />
+          </div>
+          <div class="invite-badge-date">24 июля</div>
+          <div class="invite-badge-timings">
+            <div class="invite-badge-timing-unit">
+              <div class="invite-badge-timing-unit-time">— 16:30 —</div>
+              <div class="invite-badge-timing-unit-title">Начало церемонии</div>
+              <div class="invite-badge-timing-unit-description">
+                Торжественная роспись начнется в 16:30 в Центре семьи «Казан»
+                (Чаша)
+              </div>
+            </div>
+            <div class="invite-badge-timing-unit">
+              <div class="invite-badge-timing-unit-time">— 17:30 —</div>
+              <div class="invite-badge-timing-unit-title">Фуршет</div>
+              <div class="invite-badge-timing-unit-description">
+                Вслед за торжественной росписью мы приглашаем Вас на фуршет,
+                который будет проводится по адресу Адорацкого 12а :)
+              </div>
+            </div>
+            <div class="invite-badge-timing-unit">
+              <div class="invite-badge-timing-unit-time">— 18:00 —</div>
+              <div class="invite-badge-timing-unit-title">Банкет</div>
+              <div class="invite-badge-timing-unit-description">
+                А после фуршета мы ждем всех на банкете, чтобы как следует
+                повеселиться и запомнить этот день, как самый счастливый и
+                памятный в нашей жизни
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Блок с опросом -->
+      <section class="survey">
+        <div class="container">
+          <h2>Подтвердите ваше присутствие</h2>
+          <form id="surveyForm">
+            <label for="name">Ваше имя:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Введите ваше имя"
+              required
+            />
+
+            <label>Вы придете?</label>
+            <div class="checkbox-group">
+              <label
+                ><input type="radio" name="attendance" value="yes" required />
+                Приду</label
+              >
+              <label
+                ><input type="radio" name="attendance" value="no" /> Не
+                приду</label
+              >
+            </div>
+
+            <label>Ваши пожелания по алкоголю:</label>
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" name="alcohol[]" value="wine" />
+                Вино</label
+              >
+              <label
+                ><input type="checkbox" name="alcohol[]" value="champagne" />
+                Шампанское</label
+              >
+              <label
+                ><input type="checkbox" name="alcohol[]" value="vodka" />
+                Водка</label
+              >
+              <label
+                ><input type="checkbox" name="alcohol[]" value="other" />
+                Другое</label
+              >
+            </div>
+
+            <button type="submit" class="btn">Отправить</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Информация о мероприятии -->
+      <section class="event-info">
+        <div class="container">
+          <h2>Где состоится мероприятие?</h2>
+          <p style="font-size: 1.5rem">
+            Торжественная роспись - ЗАГС «Чаша» - центр семьи «Казан»,
+            ул.Сибгата Хакима д.4 Банкетный зал - «Облака» Адоратского 12а
+          </p>
+          <!-- Красный кружок как ссылка -->
+          <a
+            href="https://maps.app.goo.gl/384D9SgGnMTwVUqS8"
+            target="_blank"
+            class="map-button"
+          >
+            <span>Показать на карте</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Дресс-код -->
+      <section class="dress-code">
+        <div class="container">
+          <h2>Дресс-код</h2>
+          <div class="dress-code-description">
+            Мы были бы рады, если вы поможете нам сделать нашу свадьбу чуточку
+            стилизованной
+          </div>
+          <p>Мужчины: классический стиль | Женщины: элегантность</p>
+          <div class="color-palette">
+            <div class="color-circle black"></div>
+            <div class="color-circle white"></div>
+            <div class="color-circle blue-light"></div>
+            <div class="color-circle blue-dark"></div>
+          </div>
+        </div>
+      </section>
+      <div class="wishes-container">
+        <img src="images/bottom_border.png" style="width: 100%" />
+
+        <div class="wishes-info">
+          <div class="wishes-title">
+            <img src="images/message_heart.png" class="message-heart" />Наши
+            пожелания
+          </div>
+          <div class="wishes-unit">
+            Мы понимаем, что дарить цветы на свадьбу - это традиция, но мы не
+            сможем насладиться их красотой до отъезда в путешествие. Вместо
+            этого, не забывайте, что лучший подарок молодой семье - конверт)
+          </div>
+          <img src="images/group_hearts.png" class="group-hearts" />
+          <div class="wishes-unit">
+            Будем благодарны, если вы воздержитесь от криков «Горько!» на
+            празднике. Для нас поцелуй - знак выражения чувств, он не может быть
+            по заказу.
+          </div>
+        </div>
+        <img
+          src="images/bottom_border.png"
+          style="transform: scaleY(-1); width: 100%"
+        />
+      </div>
+
+      <!-- Футер -->
+      <div class="feedback-container">
+        <div class="feedback-content">
+          <div class="feedback-description">
+            Если у вас остались вопросы, вы можете обратиться к нашему
+            координатору Валерии
+          </div>
+          <button class="phone-button">
+            <a href="tel:+79274288403"><span>Связаться</span></a>
+          </button>
+        </div>
+      </div>
+
+      <div class="countdown-container">
+        <h2>До нашей свадьбы осталось...</h2>
+        <div class="countdown">
+          <div class="time-item">
+            <span class="number" id="days">000</span>
+            <span class="label">дней</span>
+          </div>
+          <div class="time-item">
+            <span class="number" id="hours">00</span>
+            <span class="label">часов</span>
+          </div>
+          <div class="time-item">
+            <span class="number" id="minutes">00</span>
+            <span class="label">минут</span>
+          </div>
+          <div class="time-item">
+            <span class="number" id="seconds">00</span>
+            <span class="label">секунд</span>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Инициализация Email.js
+    emailjs.init("b82fvRGTtfKdpvxch"); // Замените YOUR_USER_ID на ваш ID из Email.js
+
+    document
+      .getElementById("surveyForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+        // Собираем выбранные чекбоксы
+        const alcohol =
+          Array.from(this.querySelectorAll('input[name="alcohol[]"]:checked'))
+            .map((checkbox) => checkbox.value)
+            .join(", ") || "Нет предпочтений";
+
+        // Создаем объект с данными
+        const formData = {
+          name: this.name.value,
+          attendance: this.attendance.value,
+          alcohol: alcohol,
+        };
+
+        // Отправляем данные
+        emailjs.send("service_8arrh49", "template_fewoz6q", formData).then(
+          function () {
+            alert("Спасибо! Ваш ответ отправлен.");
+          },
+          function (error) {
+            alert("Произошла ошибка. Попробуйте еще раз.");
+            console.error(error);
+          }
+        );
+      });
+  </script>
+  <script>
+    // Установите дату свадьбы (например, 15 декабря 2023 года)
+    const weddingDate = new Date("2025-07-24T00:00:00").getTime();
+
+    // Обновление таймера каждую секунду
+    const countdown = setInterval(() => {
+      // Текущая дата
+      const now = new Date().getTime();
+
+      // Разница между текущей датой и датой свадьбы
+      const timeLeft = weddingDate - now;
+
+      // Если время истекло
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        document.getElementById("days").textContent = "000";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        return;
+      }
+
+      // Вычисление дней, часов, минут и секунд
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      // Обновление текста на странице
+      document.getElementById("days").textContent = String(days).padStart(
+        3,
+        "0"
+      );
+      document.getElementById("hours").textContent = String(hours).padStart(
+        2,
+        "0"
+      );
+      document.getElementById("minutes").textContent = String(minutes).padStart(
+        2,
+        "0"
+      );
+      document.getElementById("seconds").textContent = String(seconds).padStart(
+        2,
+        "0"
+      );
+    }, 1000);
+  </script>
 </html>

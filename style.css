@@ -1,64 +1,670 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 /* Общие стили */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f9eae1; /* Теплый бежевый фон */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
+  margin: 0;
+  font-family: "Pacifico", cursive;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  background-image: url(images/backgr.jpg);
 }
 
-.invitation {
-    text-align: center;
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+.content {
+  width: 80%;
+  align-items: center;
+}
+
+.invate-title {
+  text-align: center;
+  font-size: 4rem;
+}
+.container {
+  width: 90%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Главный экран */
+.hero {
+  margin-top: 100px;
+  position: relative; /* Базовый контейнер для позиционирования */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+/* Красный кружок */
+.map-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  background-color: #800000;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 50%; /* Делает круг */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Центрирование */
+  text-decoration: none; /* Убираем подчеркивание у ссылки */
+  transition: transform 0.3s ease;
+}
+
+.decision .decision-title {
+  margin-top: 10px;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #800000;
+}
+
+.decision .decision-description {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.decision .decision-photos-container .photo-content {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.decision .decision-photos-container img {
+  width: 40%;
+  height: 40%;
+}
+
+.decision .decision-photos-container .decision3-photo {
+  width: 80%;
+}
+
+.map-button:hover {
+  transform: scale(1.1); /* Небольшое увеличение при наведении */
+}
+
+.map-button span {
+  display: block; /* Чтобы текст был центрирован */
+}
+.hero .photos {
+  position: relative; /* Контейнер для позиционирования изображений */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px; /* Расстояние между основными изображениями */
+}
+
+.header-photos-left {
+  position: relative;
+  display: flex;
+}
+
+.header-photos-left .gazeta-left {
+  position: absolute;
+  margin-top: -150px;
+}
+
+.header-photos-right {
+  position: relative;
+  display: flex;
+}
+
+.header-photos-right .gazeta-right {
+  position: absolute;
+  margin-top: -150px;
+}
+
+.hero .photo {
+  width: 200px; /* Размер основных изображений */
+  border: 10px solid white; /* Белая рамка */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero .photo.left {
+  transform: rotate(-10deg); /* Наклон влево */
+  z-index: 10;
+}
+
+.hero .photo.right {
+  z-index: 10;
+  transform: rotate(10deg); /* Наклон вправо */
+}
+
+.hero .photo.gazeta-left {
+  border: none;
+  box-shadow: none;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  transform: rotate(-10deg); /* Наклон влево */
+}
+
+.hero .photo.gazeta-right {
+  width: 400px;
+  height: 400px;
+  box-shadow: none;
+  border: none;
+  top: 50%;
+  transform: rotate(10deg); /* Наклон вправо */
+}
+
+/* Стили для сердечка */
+.heart {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translate(-50%, -50%); /* Корректировка позиции */
+  z-index: 20; /* Чтобы сердечко было поверх других изображений */
+}
+
+.heart img {
+  width: 100px; /* Размер сердечка */
+  animation: heartbeat 1.5s infinite; /* Анимация "биения" */
+}
+
+.stars {
+  width: 50px; /* Размер сердечка */
+  animation: heartbeat 1.5s infinite; /* Анимация "биения" */
+}
+
+/* Анимация биения сердечка */
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Текст */
+.hero h1 {
+  font-size: 2rem;
+  margin-top: 30px;
+  color: #d9534f; /* Цвет заголовка */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555; /* Цвет текста */
+}
+
+.title-names {
+  margin-top: 70px;
+  width: 100%;
+  font-family: "Pacifico", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-names .double-hearts-container {
+  animation: heartbeat 1.5s infinite; /* Анимация "биения" */
+}
+.title-names .formule {
+  font-size: 2.2rem;
+}
+
+/* Блок с опросом */
+.survey {
+  padding: 50px 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #800000;
+}
+
+.survey form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.survey label {
+  display: block;
+  font-size: 1.5rem;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+/* Поле ввода имени */
+.survey input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.survey input[type="text"]:focus {
+  border-color: #d9534f;
+  outline: none;
+}
+
+/* Кастомные радио-кнопки и чекбоксы */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.checkbox-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+  appearance: none; /* Убираем стандартный вид */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d9534f;
+  border-radius: 50%; /* Для радио-кнопок */
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-group input[type="checkbox"] {
+  border-radius: 4px; /* Для чекбоксов */
+}
+
+.checkbox-group input[type="radio"]:checked {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: "✔"; /* Добавляем галочку */
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Кнопка отправки */
+.survey button {
+  padding: 12px 20px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.survey button:hover {
+  background-color: #b33e3a;
+}
+
+.invite-container {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invite-badge {
+  width: 80%;
+  padding-top: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 5%;
+}
+
+.invite-badge-title {
+  text-align: center;
+  width: 100%;
+  font-size: 2.5rem;
+}
+
+.invite-badge-date {
+  text-align: center;
+  margin-top: 25px;
+  width: 100%;
+  font-size: 2.8rem;
+}
+
+.invite-badge-timings {
+  margin-top: 25px;
+}
+
+.invite-badge-timing-unit {
+  margin-top: 7%;
+}
+
+.invite-badge-timing-unit-time {
+}
+
+.invite-badge-timing-unit-title {
+  font-size: 2rem;
+}
+
+.invite-badge-timing-unit-description {
+  color: gray;
+}
+
+.wishes-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.wishes-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  flex-direction: column;
+  background-color: #f4e1d2;
+}
+
+.wishes-title {
+  font-size: 2.5rem;
+  color: #800000;
+}
+
+.wishes-unit {
+  margin-top: 2%;
+  font-size: 1.6rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.group-hearts {
+  width: 100px; /* Размер сердечка */
+  animation: heartbeat 1.5s infinite; /* Анимация "биения" */
+  margin-top: 1%;
+}
+
+.message-heart {
+  width: 100px; /* Размер сердечка */
+  animation: heartbeat 1.5s infinite; /* Анимация "биения" */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .survey button {
     width: 100%;
+  }
+}
+
+/* Информация о мероприятии */
+.event-info {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.event-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.event-info iframe {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .event-info iframe {
+    height: 400px;
+  }
+}
+
+/* Общие стили для кнопки */
+.phone-button {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: inline-flex; /* Размещаем текст и номер в ряд */
+  align-items: center; /* Выравниваем содержимое по центру */
+  justify-content: center;
+  gap: 10px; /* Расстояние между текстом и номером */
+  padding: 15px 30px; /* Внутренние отступы */
+  font-size: 1rem; /* Размер текста */
+  font-weight: bold; /* Жирный шрифт */
+  background-color: #f4e1d2;
+  border: none;
+  border-radius: 50px; /* Закругленные края */
+  text-decoration: none; /* Убираем подчеркивание у ссылки */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Плавные эффекты */
+}
+
+/* Эффект при наведении */
+.phone-button:hover {
+  background-color: #f1c0a1;
+  transform: scale(1.05); /* Небольшое увеличение */
+}
+
+/* Иконка телефона */
+.phone-button span:first-child::before {
+  margin-right: 8px; /* Отступ между иконкой и текстом */
+  font-size: 1.2rem; /* Размер иконки */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .phone-button {
+    font-size: 0.9rem; /* Меньший размер текста */
+    padding: 12px 25px; /* Меньшие отступы */
+  }
+}
+
+.feedback-container {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-content {
+  padding-top: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+  width: 80%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.feedback-description {
+  margin-top: 1%;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+/* Общий контейнер */
+.countdown-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
 }
 
 /* Заголовок */
-h1 {
-    font-size: 2rem;
-    color: #d9534f; /* Нежно-красный цвет */
-    margin-bottom: 20px;
+.countdown-container h2 {
+  font-size: 2rem;
+  color: #800000;
+  margin-bottom: 1%;
 }
 
-/* Основной текст */
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 10px 0;
+/* Таймер */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Расстояние между элементами */
 }
 
-/* Детали */
-.details p {
-    font-size: 1.1rem;
-    margin: 5px 0;
+/* Каждый элемент времени */
+.time-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9eae1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.details strong {
-    color: #d9534f;
+/* Цифры */
+.time-item .number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Примечание */
-.note {
-    margin-top: 20px;
-    font-style: italic;
-    color: #555;
+/* Подпись (дней, часов и т.д.) */
+.time-item .label {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Дресс-код */
+.dress-code {
+  padding: 50px 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.dress-code h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.dress-code p {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Для адаптивности */
+}
+
+.color-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Круглая форма */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Цвета */
+.color-circle.black {
+  background: linear-gradient(#000, #111);
+}
+
+.color-circle.white {
+  background: linear-gradient(#fff, #f0f0f0);
+}
+
+.color-circle.blue-light {
+  background: linear-gradient(#a6d8ff, #87cefa);
+}
+
+.color-circle.blue-dark {
+  background: linear-gradient(#0074d9, #0056b3);
+}
+
+/* Эффект шума */
+.color-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2; /* Прозрачность для мягкости */
+  pointer-events: none; /* Отключаем взаимодействие */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .color-circle {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /* Футер */
-footer {
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #777;
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #d9534f;
+  color: white;
 }
 
-footer p {
-    margin: 0;
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #f9eae1;
 }

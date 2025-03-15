@@ -107,10 +107,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   gap: 20px; /* Расстояние между основными изображениями */
 }
 
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .header-photos-left {
   position: relative;
   display: flex;
@@ -506,6 +512,24 @@ h2 {
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
+  .content {
+    width: 95%;
+  }
+  .decision .decision-photos-container .photo-content {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .row-photos {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+  }
+  .decision .decision-photos-container .decision3-photo {
+    width: 35%;
+  }
+  .invite-badge {
+    width: 100%;
+  }
   .phone-button {
     font-size: 0.9rem; /* Меньший размер текста */
     padding: 12px 25px; /* Меньшие отступы */

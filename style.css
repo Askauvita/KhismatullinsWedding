@@ -59,6 +59,12 @@ body {
   transition: transform 0.3s ease;
 }
 
+.decision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .decision .decision-title {
   margin-top: 10px;
   font-size: 3.5rem;
@@ -68,23 +74,25 @@ body {
 
 .decision .decision-description {
   text-align: center;
+  width: 80%;
   font-size: 2.2rem;
 }
 
+.row-photos {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
 .decision .decision-photos-container .photo-content {
   display: flex;
   margin-top: 10px;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.decision .decision-photos-container img {
-  width: 40%;
-  height: 40%;
-}
 
 .decision .decision-photos-container .decision3-photo {
-  width: 80%;
+  width: 41%;
 }
 
 .map-button:hover {
@@ -352,7 +360,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   padding-bottom: 5%;
 }
 
@@ -375,6 +383,10 @@ h2 {
 
 .invite-badge-timing-unit {
   margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .invite-badge-timing-unit-time {
@@ -385,7 +397,9 @@ h2 {
 }
 
 .invite-badge-timing-unit-description {
+  text-align: center;
   color: gray;
+  width: 70%;
 }
 
 .wishes-container {

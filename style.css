@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap");
 
 /* Общие стили */
 body {
@@ -75,7 +75,6 @@ body {
 .decision .decision-description {
   text-align: center;
   width: 80%;
-  font-family: sans-serif;
 
   font-size: 2.2rem;
 }
@@ -110,7 +109,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 40%;
   gap: 20px; /* Расстояние между основными изображениями */
 }
 
@@ -141,7 +140,6 @@ body {
 }
 
 .hero .photo {
-  width: 200px; /* Размер основных изображений */
   border: 10px solid white; /* Белая рамка */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -149,19 +147,20 @@ body {
 
 .hero .photo.left {
   transform: rotate(-10deg); /* Наклон влево */
+  width: 90%;
   z-index: 10;
 }
 
-.hero .photo.right {
+.photo.right {
   z-index: 10;
+  width: 90%;
+
   transform: rotate(10deg); /* Наклон вправо */
 }
 
 .hero .photo.gazeta-left {
   border: none;
   box-shadow: none;
-  width: 400px;
-  height: 400px;
   top: 50%;
   transform: rotate(-10deg); /* Наклон влево */
 }
@@ -399,7 +398,6 @@ h2 {
 }
 
 .invite-badge-timing-unit-time {
-  font-family: sans-serif;
 }
 
 .invite-badge-timing-unit-title {
@@ -408,7 +406,6 @@ h2 {
 
 .invite-badge-timing-unit-description {
   text-align: center;
-  font-family: sans-serif;
   color: gray;
   width: 70%;
 }
@@ -523,10 +520,6 @@ h2 {
 
   .decision-photos-container {
     width: 100%;
-  }
-
-  .decision .decision-photos-container .photo-content {
-    flex-direction: column;
     flex-wrap: wrap;
   }
   .row-photos {
@@ -572,7 +565,6 @@ a {
 }
 .feedback-description {
   margin-top: 1%;
-  font-family: sans-serif;
 
   font-size: 1.5rem;
   text-align: center;
@@ -642,13 +634,11 @@ a {
 }
 
 .dress-code-description {
-  font-family: sans-serif;
 }
 .dress-code p {
   font-size: 1.4rem;
   color: #555;
   margin-bottom: 30px;
-  font-family: sans-serif;
 }
 
 .color-palette {

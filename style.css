@@ -518,6 +518,9 @@ h2 {
     width: 95%;
   }
 
+  .hero .photos {
+    width: 100%;
+  }
   .decision-photos-container {
     width: 100%;
     flex-wrap: wrap;
